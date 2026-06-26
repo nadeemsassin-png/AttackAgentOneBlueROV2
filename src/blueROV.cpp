@@ -29,9 +29,10 @@
  *    White marker     = harbor target (where attacker is heading)
  *
  *  HOW TO BUILD AND RUN:
- *  ----------------------
+ *  ----------------------  
  *    cmake --build build
  *    ./build/blueROV
+ *    ? .\blueROV.exe
  *
  *  WHAT HAPPENS:
  *  -------------
@@ -51,8 +52,7 @@
 int main() {
 
     // load pearl harbor map — 0 = water, 1 = land
-    MapCreation harbor("maps/Harbour_Depth_Area.shp", 100);
-    //Checks to see if the map loads properly
+    MapCreation harbor("Maps/pearlHarbour/Harbour_Depth_Area.shp", 100);    //Checks to see if the map loads properly
     if (harbor.getCellsN() == 0) {
         std::cerr << "CRITICAL: Map failed to load. Ensure maps/ folder contains .shp, .shx, and .dbf files." << std::endl;
         return 1;
@@ -65,11 +65,11 @@ int main() {
 
     float cellSize = 700.0f / n;
 
-    // BlueROV2 specs: ~1-3 knots, shallow water capable, one-way mission
+    //BlueROV2 specs: ~1-3 knots, shallow water capable, one-way mission
     float posRow = 5.0f,  posCol = 5.0f;   // ocean entry point
     float tgtRow = 80.0f, tgtCol = 50.0f;  // harbor target
     float speed  = 0.02f;                  // 1-3 knot equivalent
-    bool  active = true;
+    bool active = true;             // slower so you can see it
 
     std::cout << "BlueROV2 launched\n";
 
@@ -95,6 +95,10 @@ int main() {
                 posRow += (dr / dist) * speed;
                 posCol += (dc / dist) * speed;
             }
+        }
+
+        if (active && (int)(posRow) % 10 == 0) {
+        std::cout << "BlueROV2 position: " << posRow << ", " << posCol << "\n";
         }
 
         window.clear(sf::Color::Black);

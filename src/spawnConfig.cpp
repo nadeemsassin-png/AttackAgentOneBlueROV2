@@ -469,7 +469,7 @@ void SpawnConfig::printSummary() const {
                       << "  det=" << z.numDetectors
                       << "  int=" << z.numInterceptors << "\n";
         }
-    }
+    }   
 
     std::cout << "==============================\n" << std::endl;
 }
