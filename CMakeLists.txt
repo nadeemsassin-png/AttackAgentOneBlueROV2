@@ -9,7 +9,7 @@ find_package(GDAL REQUIRED)
 
 # all your source files
 add_executable(blueROV
-    src/blueROV.cpp
+    blueROV.cpp
     src/mapCreation.cpp
     src/mapVisualizer.cpp
     src/spawnConfig.cpp

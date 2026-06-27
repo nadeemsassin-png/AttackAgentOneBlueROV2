@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\youar\OneDrive\Desktop\.vscode\ResearchProjAttackAgent\blueROV.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\youar\OneDrive\Desktop\.vscode\ResearchProjAttackAgent\src\mapCreation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\youar\OneDrive\Desktop\.vscode\ResearchProjAttackAgent\src\mapVisualizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\youar\OneDrive\Desktop\.vscode\ResearchProjAttackAgent\src\spawnConfig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\youar\OneDrive\Desktop\.vscode\ResearchProjAttackAgent\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3EBFB421-CD0C-3A56-96F3-3B60A2550FBE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,10 @@
+^C:\USERS\YOUAR\ONEDRIVE\DESKTOP\.VSCODE\RESEARCHPROJATTACKAGENT\BUILD\CMAKEFILES\D51976FF2BAA4AA8AB18CFEF2A930156\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/youar/OneDrive/Desktop/.vscode/ResearchProjAttackAgent -BC:/Users/youar/OneDrive/Desktop/.vscode/ResearchProjAttackAgent/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/youar/OneDrive/Desktop/.vscode/ResearchProjAttackAgent/build/blueROV.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
